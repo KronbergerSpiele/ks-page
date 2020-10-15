@@ -5,13 +5,14 @@ render_mode unshaded;
 uniform sampler2D tex: hint_albedo;
 uniform float width = 48;
 uniform float height = 32;
+uniform float time = 0;
 
 void vertex() {
 	float PI  = 3.14159265358979323846264;
 	float Px = (VERTEX.x + width / 2.0) / width * 0.8;
 	float Py = (-VERTEX.z + height / 2.0) / height;
 	
-	float t = 1.0 - (TIME - floor(TIME));
+	float t = 1.0 - time;
 	float A = - 15.0 * t;
 	float h = PI / 2.0 * t;
 	float Rc = sqrt(Px * Px + pow(Py - A, 2));

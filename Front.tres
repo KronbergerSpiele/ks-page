@@ -7,6 +7,7 @@
 shader = ExtResource( 2 )
 shader_param/width = 48.0
 shader_param/height = 32.0
+shader_param/time = 0.0
 shader_param/tex = ExtResource( 1 )
 
 [resource]

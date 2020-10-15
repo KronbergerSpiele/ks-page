@@ -14,6 +14,7 @@ public KSPage Page;
 
 public override void _Ready()
 {
+  base._Ready();
   Page = new KSPage(GetNode("Page"));
 }
 ```

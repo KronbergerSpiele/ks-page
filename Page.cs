@@ -5,8 +5,9 @@ public class KSPage
 {
     private Node InternalNode;
 
-    public KSPage(Node node)
+    public KSPage(Node node, ImageTexture texture)
     {
         InternalNode = node;
+        InternalNode.Call("startWith", texture, texture);
     }
 }
