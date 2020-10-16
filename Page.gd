@@ -15,6 +15,7 @@ func _enter_tree():
 func _process(_delta):
 	passedTime = clamp(passedTime+_delta, 0, 1)
 	$Viewport/Front.mesh.material.set_shader_param('time', passedTime)
+	$Viewport/Back.mesh.material.set_shader_param('time', passedTime)
 	var texture = $Viewport.get_texture()
 	$screen.texture = texture
 	if passedTime >= 1:
